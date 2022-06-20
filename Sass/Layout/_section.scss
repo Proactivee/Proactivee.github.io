@@ -1,0 +1,46 @@
+section{
+    font-family: 'Roboto', Times, serif;
+    padding-bottom: 60px;
+    background-color: $color-background
+}
+
+.town{
+    display: flex;
+    background-color: rgba(211, 210, 210,0.5);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+ 
+    & i{ 
+        padding-right: 10px;
+        color:$color-font-section;
+    }
+}
+
+.search1{
+    border: none;
+    background-color: rgba(211, 210, 210,0);
+
+}
+
+.explore{
+
+    & h2{
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-top: 40px;
+        text-align:center;
+    }
+    & p{
+        font-family: 'Roboto-l', Times, serif;
+        margin-left: 3.4%;
+        margin-right: 3.4%;
+        text-align:center;
+        white-space:initial;
+        padding-bottom: 50px;
+    }
+    
+}
+

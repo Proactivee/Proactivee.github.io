@@ -1,0 +1,76 @@
+nav{
+    & h2{
+        margin-left: 15px;
+    }
+} 
+/*--------Numéro-list-style---*/
+ol{
+    counter-reset: orderedlist;
+    list-style-type: none;
+    padding-left: 15px;
+}
+   ol li::before{
+    counter-increment: orderedlist;
+        content: counter(orderedlist);
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-radius: 100%;
+        position:relative;
+        background-color: $color-primary ;
+        color:white;
+        font-size:small;
+        right:7px;
+   }
+
+/*-------Propriétés nom ------*/
+.how{
+
+    & li{
+        
+        background-color: $color-background;
+        border-radius: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-top: 20px;
+        margin-right: 10px;
+        @include bbox-shadow-main;
+        font-family: 'Roboto', Courier, monospace;
+
+        &:hover{
+            background-color: rgba($color-primary,0.2);
+            & i{
+                color: $color-primary;
+            }
+        }
+
+
+    & i{
+        color:grey;
+        
+    }
+    }
+    &_pick{
+        & i{
+            padding-right:25px;
+            padding-left:15px;
+        }
+    }   
+    &_comp{
+        & i{
+            padding-right:25px;
+            padding-left:15px;
+        }
+    }
+    &_eat{
+        & i{
+            padding-left:15px;
+            padding-right:25px;
+        }
+        
+    }
+    }
+
+
+

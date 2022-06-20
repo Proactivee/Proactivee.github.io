@@ -1,0 +1,25 @@
+/*---------bouton dégradé -------*/
+.explore{
+    &_btn{
+        text-align: center;
+    
+        & a{
+            @include btn_core;
+            margin-top: 15px;
+           
+            
+        }
+    }
+}
+
+/*--------bouton nouveau --------*/
+.new{
+    border: 1px solid green;
+    background-color: $color-tertiary;
+    width: fit-content;
+    padding: 5px 8px;
+    font-family: 'Roboto', Courier, sans-serif;
+    font-weight: 700;
+    color: darken($color-tertiary, $amount: 30);
+    justify-items: end;
+}
