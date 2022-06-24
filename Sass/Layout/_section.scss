@@ -1,5 +1,5 @@
 section{
-    font-family: 'Roboto', Times, serif;
+    font-family: $font-title;
     padding-bottom: 60px;
     background-color: $color-background
 }
@@ -34,7 +34,7 @@ section{
         text-align:center;
     }
     & p{
-        font-family: 'Roboto-l', Times, serif;
+        font-family: $font-light;
         margin-left: 3.4%;
         margin-right: 3.4%;
         text-align:center;

@@ -4,7 +4,7 @@ footer{
     margin-bottom: 0%;
     border: 1px solid rgb(58, 57, 57);
     & h1{
-        font-family: 'Shrikhand-regular', Times, serif;
+        font-family: $font-logo;
         font-size: medium;
         font-weight: 100;
         color: $color-font-footer;
@@ -14,10 +14,11 @@ footer{
 
     & ul{
         padding-left: 25px;
+        list-style-type: none;
     }
 
     & li{
-          font-family: 'Roboto', Times, serif;;
+          font-family: $font-title;
           font-size: small;
           width: fit-content;
           padding: 5px;

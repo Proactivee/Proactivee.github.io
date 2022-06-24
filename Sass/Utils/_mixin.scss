@@ -7,6 +7,8 @@
     text-decoration: none;
     color:$color-font-footer;
     box-shadow: 2px 2px 2px -2px -1px rgba(grey,0.3);
+    width:fit-content;
+    font-family: $font-title;
 }
 @mixin bbox-shadow-main{
     box-shadow: 3px 6px 4px rgba(grey,0.2);

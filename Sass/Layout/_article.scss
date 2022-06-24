@@ -4,7 +4,7 @@ article{
     padding-top: 40px;
     padding-left: 25px;
     padding-right: 10px;
-    font-family: 'Roboto', Courier, monospace;
+    font-family: $font-title
 }
 
 .rest{
@@ -33,9 +33,9 @@ article{
         bottom:165px;
         border-radius: 4px;
         margin-right: 15px;
-        font-family: 'Roboto', Courier, sans-serif;
+        font-family: $font-title;
         font-weight: 700;
-        color: darken($color-tertiary, $amount: 30);
+        color: darken($color-tertiary, $amount: 40);
         margin-bottom: -28px;
     }
     
@@ -48,21 +48,25 @@ article{
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
-    
+    & a{
+        text-decoration: none;
+        color: black;
+        
+    }
     
 
     &_write{
    
         & h3{
           
-          font-family: 'Roboto', Courier, sans-serif;
+          font-family: $font-title;
           margin-top: 20px;
           margin-bottom: 6px;
           
         }
         & h4{
             margin-top: -3px;
-            font-family: 'Roboto-l', Courier, sans-serif;
+            font-family: $font-light;
             font-size: 17px;
         }
 

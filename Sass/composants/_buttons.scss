@@ -12,14 +12,3 @@
     }
 }
 
-/*--------bouton nouveau --------*/
-.new{
-    border: 1px solid green;
-    background-color: $color-tertiary;
-    width: fit-content;
-    padding: 5px 8px;
-    font-family: 'Roboto', Courier, sans-serif;
-    font-weight: 700;
-    color: darken($color-tertiary, $amount: 30);
-    justify-items: end;
-}

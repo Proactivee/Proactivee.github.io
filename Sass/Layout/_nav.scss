@@ -1,6 +1,8 @@
 nav{
     & h2{
         margin-left: 15px;
+        font-family: $font-title;
+
     }
 } 
 /*--------Numéro-list-style---*/
@@ -36,7 +38,7 @@ ol{
         margin-top: 20px;
         margin-right: 10px;
         @include bbox-shadow-main;
-        font-family: 'Roboto', Courier, monospace;
+        font-family: $font-title;
 
         &:hover{
             background-color: rgba($color-primary,0.2);
