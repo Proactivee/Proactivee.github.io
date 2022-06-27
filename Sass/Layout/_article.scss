@@ -74,13 +74,103 @@ article{
     }
    
 
-    &_heart{
+    & .heart-empty{
         padding-top: 30px;
-        padding-right: 30px;
-        color:$color-font-section;
-        &:hover{
-            cursor:pointer;
+        margin-right: 40px;
+    
         }
 
+    
+    
+    & .heart-color1{
+        position: absolute;
+        right: 35px;
+        top: 1079px;
+        opacity: calc(0); 
+        transform: scale(0.5);
+        display: block;
+        transition-property: transform;
+        transition-duration: 800ms;
+        background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+        -webkit-background-clip: text;
+        background-clip:text;
+        -webkit-text-fill-color:transparent;
+        padding: 15px;
+        &:hover{
+                
+            cursor:pointer;
+            opacity: calc(1);
+            transform: scale(1);
+          
+        }
     }
-}
+
+    & .heart-color2{
+            position: absolute;
+            right: 35px;
+            top: 1366px;
+            opacity: calc(0); 
+            transform: scale(0.5);
+            display: block;
+            transition-property: transform;
+            transition-duration: 800ms;
+            background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+            -webkit-background-clip: text;
+            background-clip:text;
+            -webkit-text-fill-color:transparent;
+            padding: 15px;
+            &:hover{
+                    
+                cursor:pointer;
+                opacity: calc(1);
+                transform: scale(1);
+              
+            } 
+        }     
+        & .heart-color3{
+            position: absolute;
+            right: 35px;
+            top: 1652px;
+            opacity: calc(0); 
+            transform: scale(0.5);
+            display: block;
+            transition-property: transform;
+            transition-duration: 800ms;
+            background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+            -webkit-background-clip: text;
+            background-clip:text;
+            -webkit-text-fill-color:transparent;
+            padding: 15px;
+            &:hover{
+                    
+                cursor:pointer;
+                opacity: calc(1);
+                transform: scale(1);
+              
+            } 
+        }  
+        & .heart-color4{
+            position: absolute;
+            right: 35px;
+            top: 1938px;
+            opacity: calc(0); 
+            transform: scale(0.5);
+            display: block;
+            transition-property: transform;
+            transition-duration: 800ms;
+            background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+            -webkit-background-clip: text;
+            background-clip:text;
+            -webkit-text-fill-color:transparent;
+            padding: 15px;
+            &:hover{
+                    
+                cursor:pointer;
+                opacity: calc(1);
+                transform: scale(1);
+              
+            } 
+        }  
+
+
+    }

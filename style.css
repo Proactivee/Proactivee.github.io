@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*----------COULEUR--------*/
+/*-----------FONT-------------*/
+/*--------Shadow-----------*/
 /* -----Import des font---------*/
 @font-face {
   font-family: "Shrikhand-regular";
@@ -366,7 +369,13 @@ template {
   box-shadow: 2px 2px 2px -2px -1px rgba(128, 128, 128, 0.3);
   width: fit-content;
   font-family: "Roboto", Times, serif;
-  margin-top: 15px;
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
+}
+.explore_btn a:hover {
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.6);
+}
+.explore_btn a:hover {
+  background: linear-gradient(#ff88de, #9b63df);
 }
 
 header {
@@ -442,11 +451,15 @@ section {
   background-color: rgba(211, 210, 210, 0);
 }
 
+.explore {
+  max-height: 190px;
+}
 .explore h2 {
   margin-left: 10%;
   margin-right: 10%;
-  padding-top: 40px;
+  margin-top: 40px;
   text-align: center;
+  height: 50px;
 }
 .explore p {
   font-family: "Roboto-l", Times, serif;
@@ -454,7 +467,8 @@ section {
   margin-right: 3.4%;
   text-align: center;
   white-space: initial;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
+  height: 30px;
 }
 
 nav h2 {
@@ -496,6 +510,9 @@ ol li::before {
   font-family: "Roboto", Times, serif;
 }
 .how li:hover {
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.6);
+}
+.how li:hover {
   background-color: rgba(147, 86, 220, 0.2);
 }
 .how li:hover i {
@@ -533,6 +550,9 @@ article {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
+}
+.rest:hover {
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.6);
 }
 .rest img {
   object-fit: cover;
@@ -575,13 +595,89 @@ article {
   font-family: "Roboto-l", Times, serif;
   font-size: 17px;
 }
-.box_heart {
+.box .heart-empty {
   padding-top: 30px;
-  padding-right: 30px;
-  color: rgb(58, 57, 57);
+  margin-right: 40px;
 }
-.box_heart:hover {
+.box .heart-color1 {
+  position: absolute;
+  right: 35px;
+  top: 1079px;
+  opacity: 0;
+  transform: scale(0.5);
+  display: block;
+  transition-property: transform;
+  transition-duration: 800ms;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 15px;
+}
+.box .heart-color1:hover {
   cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
+}
+.box .heart-color2 {
+  position: absolute;
+  right: 35px;
+  top: 1366px;
+  opacity: 0;
+  transform: scale(0.5);
+  display: block;
+  transition-property: transform;
+  transition-duration: 800ms;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 15px;
+}
+.box .heart-color2:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
+}
+.box .heart-color3 {
+  position: absolute;
+  right: 35px;
+  top: 1652px;
+  opacity: 0;
+  transform: scale(0.5);
+  display: block;
+  transition-property: transform;
+  transition-duration: 800ms;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 15px;
+}
+.box .heart-color3:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
+}
+.box .heart-color4 {
+  position: absolute;
+  right: 35px;
+  top: 1938px;
+  opacity: 0;
+  transform: scale(0.5);
+  display: block;
+  transition-property: transform;
+  transition-duration: 800ms;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 15px;
+}
+.box .heart-color4:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */

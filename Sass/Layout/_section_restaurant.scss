@@ -24,6 +24,7 @@ section{
     position: relative;
     margin-top: -60px;
     background-color: $color-background-resto;
+   
 
     &_titre{
         font-family: $font-logo;
@@ -32,28 +33,64 @@ section{
         justify-content: space-between;
         margin-left: 20px;
         padding-top: 15px;
-        & i{
+        & .heart-empty{
             padding-top: 30px;
             margin-right: 40px;
+        
+            }
+
+        
+        
+        & .heart-color{
+            position: absolute;
+            right: 25px;
+            top: 30px;
+            opacity: calc(0); 
+            transform: scale(0.5);
+            display: block;
+            transition-property: transform;
+            transition-duration: 800ms;
+            background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+            -webkit-background-clip: text;
+            background-clip:text;
+            -webkit-text-fill-color:transparent;
+            padding: 15px;
+            
+            
+    
+
+            &:hover{
+                
+                cursor:pointer;
+                opacity: calc(1);
+                transform: scale(1);
+              
+            }
         }
+    
     }
     
 }
 .type{
     margin-bottom: 50px;
     
-    
+    &_underline{
+        border: 2px solid $color-tertiary;
+        width:35px;
+        margin-left: 20px;
+        margin-top: -15px;
+    }
     & h4{
         font-family: $font-light;
         color: $color-font-section;
         width: fit-content;
-        border-bottom: 3px solid $color-tertiary;
+       
         margin-left: 20px;
     }
 
     &_element{
 
-        @include bbox-shadow-main;
+        box-shadow: $shadow_button;
         margin: 20px;
         border-radius:15px;
         display: flex;

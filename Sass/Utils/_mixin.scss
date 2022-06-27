@@ -1,5 +1,5 @@
 @mixin btn_core{
-    background:linear-gradient($color-secondary,$color-primary);
+    background:$color-bouton;
     padding: 15px;
     padding-left: 23px;
     padding-right:23px;
@@ -9,7 +9,18 @@
     box-shadow: 2px 2px 2px -2px -1px rgba(grey,0.3);
     width:fit-content;
     font-family: $font-title;
+
+    @include bbox-shadow-main;
+
+    &:hover{
+       background: linear-gradient($color-secondary-light,$color-primary-light);
+
+    }
 }
 @mixin bbox-shadow-main{
-    box-shadow: 3px 6px 4px rgba(grey,0.2);
+    box-shadow: $shadow_button;
+    &:hover{
+        box-shadow: $shadow_button_hover;
+    }
 }
+

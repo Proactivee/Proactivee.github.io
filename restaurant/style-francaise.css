@@ -1,5 +1,7 @@
 @charset "UTF-8";
-/* -----Import des font---------*/
+/*----------COULEUR--------*/
+/*-----------FONT-------------*/
+/*--------Shadow-----------*/
 @font-face {
   font-family: "Shrikhand-regular";
   src: url("../font/Shrikhand-Regular.ttf");
@@ -366,7 +368,14 @@ template {
   box-shadow: 2px 2px 2px -2px -1px rgba(128, 128, 128, 0.3);
   width: fit-content;
   font-family: "Roboto", Times, serif;
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
   margin-top: 15px;
+}
+.explore_btn a:hover {
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.6);
+}
+.explore_btn a:hover {
+  background: linear-gradient(#ff88de, #9b63df);
 }
 
 footer {
@@ -458,19 +467,44 @@ section h2 {
   margin-left: 20px;
   padding-top: 15px;
 }
-.menu_titre i {
+.menu_titre .heart-empty {
   padding-top: 30px;
   margin-right: 40px;
+}
+.menu_titre .heart-color {
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  opacity: 0;
+  transform: scale(0.5);
+  display: block;
+  transition-property: transform;
+  transition-duration: 800ms;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 15px;
+}
+.menu_titre .heart-color:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .type {
   margin-bottom: 50px;
 }
+.type_underline {
+  border: 2px solid #99E2D0;
+  width: 35px;
+  margin-left: 20px;
+  margin-top: -15px;
+}
 .type h4 {
   font-family: "Roboto-l", Times, serif;
   color: rgb(58, 57, 57);
   width: fit-content;
-  border-bottom: 3px solid #99E2D0;
   margin-left: 20px;
 }
 .type_element {
@@ -507,10 +541,17 @@ section h2 {
   box-shadow: 2px 2px 2px -2px -1px rgba(128, 128, 128, 0.3);
   width: fit-content;
   font-family: "Roboto", Times, serif;
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
   padding-left: 60px;
   padding-right: 60px;
   margin: auto;
   width: 100px;
+}
+.order_btn:hover {
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.6);
+}
+.order_btn:hover {
+  background: linear-gradient(#ff88de, #9b63df);
 }
 .order_btn:hover {
   cursor: pointer;

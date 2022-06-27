@@ -1,3 +1,4 @@
+/*----------COULEUR--------*/
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
@@ -5,6 +6,16 @@ $color-font-footer:white;
 $color-font-section:rgb(58, 57, 57);
 $color-background:rgba(235, 236, 238, 0.4);
 $color-background-resto:rgb(248, 250, 255);
+$color-bouton:linear-gradient($color-secondary,$color-primary);
+$color-secondary-light:lighten($color: #FF79DA, $amount: 3);
+$color-primary-light:lighten($color: #9356DC, $amount: 3);
+
+/*-----------FONT-------------*/
 $font-title:'Roboto', Times, serif;
 $font-logo:'Shrikhand-regular', Times, serif;
 $font-light:'Roboto-l', Times, serif;
+
+/*--------Shadow-----------*/
+
+$shadow_button:3px 6px 4px rgba(grey,0.2);
+$shadow_button_hover:3px 6px 4px rgba(grey,0.6);
