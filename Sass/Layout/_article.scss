@@ -4,11 +4,10 @@ article{
     padding-top: 40px;
     padding-left: 25px;
     padding-right: 10px;
-    font-family: $font-title
+    font-family: $font-title;
 }
 
 .rest{
-    
     @include bbox-shadow-main;
     border-radius: 25px;
     margin-bottom: 10px;
@@ -171,6 +170,4 @@ article{
               
             } 
         }  
-
-
     }
