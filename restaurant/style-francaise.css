@@ -369,7 +369,6 @@ template {
   width: fit-content;
   font-family: "Roboto", Times, serif;
   box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
-  margin-top: 15px;
 }
 .explore_btn a:hover {
   box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.6);
@@ -479,7 +478,8 @@ section h2 {
   transform: scale(0.5);
   display: block;
   transition-property: transform;
-  transition-duration: 800ms;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   background-clip: text;
@@ -507,8 +507,12 @@ section h2 {
   width: fit-content;
   margin-left: 20px;
 }
-.type_element {
+.type_element1 {
   box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
+  animation: decouverte 1000ms 300ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  transform-origin: top;
   margin: 20px;
   border-radius: 15px;
   display: flex;
@@ -516,18 +520,109 @@ section h2 {
   justify-content: space-between;
   background-color: white;
 }
-.type_element p {
+.type_element1 p {
   font-family: "Roboto-l", Times, serif;
   padding-left: 10px;
 }
-.type_element h3 {
+.type_element1 h3 {
   padding-left: 10px;
   margin-bottom: -8px;
+}
+.type_element1:hover {
+  cursor: pointer;
+}
+.type_element1:hover .check {
+  display: block;
+  cursor: pointer;
+}
+.type_element1:hover .prix {
+  animation: prix_slide 400ms ease-out forwards;
+  transform-origin: right;
+}
+.type_element2 {
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
+  animation: decouverte 1000ms 500ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  margin: 20px;
+  border-radius: 15px;
+  display: flex;
+  font-family: "Roboto", Times, serif;
+  justify-content: space-between;
+  background-color: white;
+}
+.type_element2 p {
+  font-family: "Roboto-l", Times, serif;
+  padding-left: 10px;
+}
+.type_element2 h3 {
+  padding-left: 10px;
+  margin-bottom: -8px;
+}
+.type_element2:hover {
+  cursor: pointer;
+}
+.type_element2:hover .check {
+  display: block;
+  cursor: pointer;
+}
+.type_element2:hover .prix {
+  animation: prix_slide 400ms ease-out forwards;
+  transform-origin: right;
+}
+.type_element3 {
+  box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
+  animation: decouverte 1000ms 700ms;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  margin: 20px;
+  border-radius: 15px;
+  display: flex;
+  font-family: "Roboto", Times, serif;
+  justify-content: space-between;
+  background-color: white;
+}
+.type_element3 p {
+  font-family: "Roboto-l", Times, serif;
+  padding-left: 10px;
+}
+.type_element3 h3 {
+  padding-left: 10px;
+  margin-bottom: -8px;
+}
+.type_element3:hover {
+  cursor: pointer;
+}
+.type_element3:hover .check {
+  display: block;
+  cursor: pointer;
+}
+.type_element3:hover .prix {
+  animation: prix_slide 400ms ease-out forwards;
+  transform-origin: right;
+}
+.type .check {
+  display: none;
+  padding: 25px;
+  font-size: 30px;
+  color: #99E2D0;
+  background-color: #99e2d0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slide 400ms ease-out forwards;
+  transform-origin: right;
+}
+.type .check .sign {
+  background-color: white;
+  border-radius: 50%;
+  animation: check_turn 400ms forwards;
 }
 
 .prix {
   margin-top: 50px;
   margin-right: 30px;
+  position: absolute;
+  right: 0px;
 }
 
 .order_btn {
@@ -555,6 +650,41 @@ section h2 {
 }
 .order_btn:hover {
   cursor: pointer;
+}
+
+@keyframes decouverte {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes prix_slide {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-70px);
+  }
+}
+@keyframes check_turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style-francaise.css.map */

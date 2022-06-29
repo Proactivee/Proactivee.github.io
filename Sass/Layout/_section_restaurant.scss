@@ -49,7 +49,8 @@ section{
             transform: scale(0.5);
             display: block;
             transition-property: transform;
-            transition-duration: 800ms;
+            transition-duration: 500ms;
+            transition-timing-function: ease-in;
             background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
             -webkit-background-clip: text;
             background-clip:text;
@@ -71,8 +72,12 @@ section{
     }
     
 }
+
+
 .type{
     margin-bottom: 50px;
+
+   
     
     &_underline{
         border: 2px solid $color-tertiary;
@@ -84,13 +89,53 @@ section{
         font-family: $font-light;
         color: $color-font-section;
         width: fit-content;
-       
         margin-left: 20px;
     }
 
-    &_element{
+    &_element1{
 
         box-shadow: $shadow_button;
+        animation: decouverte 1000ms 300ms;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        transform-origin: top;
+        margin: 20px;
+        border-radius:15px;
+        display: flex;
+        font-family: $font-title;
+        justify-content: space-between;
+        background-color: white;
+        & p{
+            font-family: $font-light;
+            padding-left: 10px;
+        }
+        & h3{
+            padding-left: 10px;
+            margin-bottom: -8px;
+        
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        &:hover .check{
+            display:block;
+            cursor:pointer;
+        }
+        &:hover .prix{
+            animation: prix_slide 400ms ease-out forwards;
+            transform-origin: right;
+        }
+
+    
+
+    }   
+        
+    &_element2{
+
+        box-shadow: $shadow_button;
+        animation: decouverte 1000ms 500ms;
+        opacity: 0;
+        animation-fill-mode: forwards;
         margin: 20px;
         border-radius:15px;
         display: flex;
@@ -105,11 +150,81 @@ section{
             padding-left: 10px;
             margin-bottom: -8px;
         }
+        &:hover{
+            cursor: pointer;
+        }
+        &:hover .check{
+            display:block;
+            cursor:pointer;
+        }
+        &:hover .prix{
+            animation: prix_slide 400ms ease-out forwards;
+            transform-origin: right;
+        }
     }
+    &_element3{
+
+        box-shadow: $shadow_button;
+        animation: decouverte 1000ms 700ms;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        margin: 20px;
+        border-radius:15px;
+        display: flex;
+        font-family: $font-title;
+        justify-content: space-between;
+        background-color: white;
+        & p{
+            font-family: $font-light;
+            padding-left: 10px;
+        }
+        & h3{
+            padding-left: 10px;
+            margin-bottom: -8px;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        &:hover .check{
+            display:block;
+            cursor:pointer;
+        }
+        &:hover .prix{
+            animation: prix_slide 400ms ease-out forwards;
+            transform-origin: right;
+        }
+    }
+
+    & .check{
+        display: none;
+        padding: 25px;
+        font-size: 30px;
+        color:$color-tertiary;
+        background-color: rgba($color: $color-tertiary, $alpha: 1);
+        border-top-right-radius:15px;
+        border-bottom-right-radius: 15px;
+        animation: slide 400ms ease-out forwards;
+        transform-origin: right;
+        
+
+    
+        
+        & .sign{
+            
+            background-color: white;
+            border-radius: 50%;
+            animation: check_turn 400ms forwards;
+
+        }
+    }
+    
+
 }
 .prix{
     margin-top: 50px;
     margin-right: 30px;
+    position: absolute;
+    right:0px
 
 }
 .order_btn{
@@ -121,6 +236,44 @@ section{
     &:hover{
         cursor:pointer;
     }
-
     
+}
+
+@keyframes decouverte{
+    0%{
+        opacity:0;
+        transform:scaleY(0)
+    }
+    
+    100%{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+@keyframes slide{
+    0%{
+        transform:scaleX(0)
+    }
+    100%{
+        transform: scaleX(1);
+    }
+
+}
+@keyframes prix_slide{
+    0%{
+        transform:translateX(0px)
+    }
+    100%{
+        transform: translateX(-70px);
+    }
+}
+@keyframes check_turn{
+    0%{
+        transform:rotate(0deg);
+        
+    }
+    100%{
+        transform: rotate(360deg);
+        
+    }
 }
