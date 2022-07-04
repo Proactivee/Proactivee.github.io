@@ -1,3 +1,122 @@
+@media all and (min-width: $breakpoints_Low) and (max-width: $breakpoints_high){
+    
 
-$mobile:768px;
-$mobile-down: "only screen and (min-width:{#$mobile}";
+.flex{
+    display:flex;
+}    
+section{
+    
+    margin-bottom: 0px;
+}
+nav{
+      width: 50%;
+      margin-bottom: 0px;
+    
+        & h2{
+
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 21px;
+            padding-top: -10px;
+            color:$color-font-section;
+         
+        }
+
+        & .how{
+        background-color: $color-background;
+        padding-bottom: 12px;
+        padding-top: 10px;
+        & li{
+            background: darken($color: $color-background, $amount: 6);
+        }
+        
+    }
+  }
+
+
+ /*--------------------article-----------------------*/
+article{
+    
+    margin-top: 0px;
+    position:relative;
+    top:-60px;
+   
+    
+    & h2{
+        text-align: center;
+
+    }
+}
+
+  
+
+.choice{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & .rest{
+        max-width: 350px;
+
+    }
+}
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:$breakpoints_high){
+
+
+    
+    nav{
+
+        & h2{
+            text-align: center;
+        }
+        & ol{
+
+            display:flex;
+            justify-content: space-around;
+
+        & li{
+            padding-right: 25px;
+        }
+
+        }
+        
+        
+    }
+
+    article{
+ 
+        & h2{
+            text-align: center;
+        }
+
+    }
+    .choice{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        & .rest{
+            max-width: 470px;
+        }
+    }
+    
+body{
+    max-width: 1440px;
+    
+}
+
+} 
+
+

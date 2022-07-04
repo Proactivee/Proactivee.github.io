@@ -2,6 +2,84 @@
 /*----------COULEUR--------*/
 /*-----------FONT-------------*/
 /*--------Shadow-----------*/
+/*-----media------*/
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .flex {
+    display: flex;
+  }
+
+  section {
+    margin-bottom: 0px;
+  }
+
+  nav {
+    width: 50%;
+    margin-bottom: 0px;
+  }
+  nav h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 21px;
+    padding-top: -10px;
+    color: rgb(58, 57, 57);
+  }
+  nav .how {
+    background-color: rgba(235, 236, 238, 0.4);
+    padding-bottom: 12px;
+    padding-top: 10px;
+  }
+  nav .how li {
+    background: rgba(218, 220, 224, 0.4);
+  }
+
+  /*--------------------article-----------------------*/
+  article {
+    margin-top: 0px;
+    position: relative;
+    top: -60px;
+  }
+  article h2 {
+    text-align: center;
+  }
+
+  .choice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .choice .rest {
+    max-width: 350px;
+  }
+}
+@media screen and (min-width: 992px) {
+  nav h2 {
+    text-align: center;
+  }
+  nav ol {
+    display: flex;
+    justify-content: space-around;
+  }
+  nav ol li {
+    padding-right: 25px;
+  }
+
+  article h2 {
+    text-align: center;
+  }
+
+  .choice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .choice .rest {
+    max-width: 470px;
+  }
+
+  body {
+    max-width: 1440px;
+  }
+}
 /* -----Import des font---------*/
 @font-face {
   font-family: "Shrikhand-regular";
@@ -393,7 +471,8 @@ header h1 {
 footer {
   color: white;
   background-color: rgb(58, 57, 57);
-  margin-bottom: 0%;
+  margin-bottom: 0;
+  margin-top: 20px;
   border: 1px solid rgb(58, 57, 57);
 }
 footer h1 {
@@ -550,6 +629,7 @@ article {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .rest:hover {
   box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.6);
@@ -600,14 +680,14 @@ article {
   margin-right: 40px;
 }
 .box .heart-color1 {
-  position: absolute;
-  right: 35px;
-  top: 1079px;
+  position: relative;
+  right: 15px;
+  bottom: 25px;
   opacity: 0;
   transform: scale(0.5);
   display: block;
   transition-property: transform;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
   transition-timing-function: ease-in;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
@@ -621,14 +701,14 @@ article {
   transform: scale(1);
 }
 .box .heart-color2 {
-  position: absolute;
-  right: 35px;
-  top: 1366px;
+  position: relative;
+  right: 15px;
+  bottom: 25px;
   opacity: 0;
   transform: scale(0.5);
   display: block;
   transition-property: transform;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
   transition-timing-function: ease-in;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
@@ -642,14 +722,14 @@ article {
   transform: scale(1);
 }
 .box .heart-color3 {
-  position: absolute;
-  right: 35px;
-  top: 1652px;
+  position: relative;
+  right: 15px;
+  bottom: 25px;
   opacity: 0;
   transform: scale(0.5);
   display: block;
   transition-property: transform;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
   transition-timing-function: ease-in;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
@@ -663,14 +743,15 @@ article {
   transform: scale(1);
 }
 .box .heart-color4 {
-  position: absolute;
-  right: 35px;
-  top: 1938px;
+  position: relative;
+  right: 15px;
+  bottom: 25px;
   opacity: 0;
   transform: scale(0.5);
   display: block;
   transition-property: transform;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
+  transform-origin: center;
   transition-timing-function: ease-in;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;

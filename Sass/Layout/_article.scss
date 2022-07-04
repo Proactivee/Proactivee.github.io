@@ -4,6 +4,7 @@ article{
     padding-top: 40px;
     padding-left: 25px;
     padding-right: 10px;
+    
     font-family: $font-title;
 }
 
@@ -14,6 +15,9 @@ article{
     margin-top: 15px;
     display: flex;
     flex-direction: column;
+    
+    width: 100%;
+    
 
     & img{
         object-fit:cover;
@@ -47,6 +51,7 @@ article{
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
+    
     & a{
         text-decoration: none;
         color: black;
@@ -55,12 +60,16 @@ article{
     
 
     &_write{
+
+        
+
    
         & h3{
           
           font-family: $font-title;
           margin-top: 20px;
           margin-bottom: 6px;
+          
           
         }
         & h4{
@@ -82,14 +91,14 @@ article{
     
     
     & .heart-color1{
-        position: absolute;
-        right: 35px;
-        top: 1079px;
+        position: relative;
+        right: 15px;
+        bottom:25px;
         opacity: calc(0); 
         transform: scale(0.5);
         display: block;
         transition-property: transform;
-        transition-duration: 500ms;
+        transition-duration: 300ms;
         transition-timing-function: ease-in;
         background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
         -webkit-background-clip: text;
@@ -106,14 +115,14 @@ article{
     }
 
     & .heart-color2{
-            position: absolute;
-            right: 35px;
-            top: 1366px;
+          position: relative;
+           right: 15px;
+           bottom:25px;
             opacity: calc(0); 
             transform: scale(0.5);
             display: block;
             transition-property: transform;
-            transition-duration: 500ms;
+            transition-duration: 300ms;
             transition-timing-function: ease-in;
             background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
             -webkit-background-clip: text;
@@ -129,14 +138,14 @@ article{
             } 
         }     
         & .heart-color3{
-            position: absolute;
-            right: 35px;
-            top: 1652px;
+            position: relative;
+            right: 15px;
+            bottom:25px;
             opacity: calc(0); 
             transform: scale(0.5);
             display: block;
             transition-property: transform;
-            transition-duration: 500ms;
+            transition-duration: 300ms;
             transition-timing-function: ease-in;
             background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
             -webkit-background-clip: text;
@@ -152,14 +161,15 @@ article{
             } 
         }  
         & .heart-color4{
-            position: absolute;
-            right: 35px;
-            top: 1938px;
+            position: relative;
+            right: 15px;
+            bottom:25px;
             opacity: calc(0); 
             transform: scale(0.5);
             display: block;
             transition-property: transform;
-            transition-duration: 500ms;
+            transition-duration: 300ms;
+            transform-origin: center;
             transition-timing-function: ease-in;
             background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
             -webkit-background-clip: text;

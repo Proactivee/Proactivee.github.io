@@ -2,6 +2,48 @@
 /*----------COULEUR--------*/
 /*-----------FONT-------------*/
 /*--------Shadow-----------*/
+/*-----media------*/
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border: 2px solid #99E2D0;
+    border-radius: 15px;
+    margin: 15px;
+  }
+  .type h4 {
+    position: relative;
+    top: 80px;
+    right: 20px;
+    margin-left: -20px;
+  }
+  .type_underline {
+    display: none;
+  }
+
+  .type_element1, .type_element2, .type_element3 {
+    width: 270px;
+  }
+  .type_element1_underline, .type_element2_underline, .type_element3_underline {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .type {
+    width: 400px;
+  }
+  .type .type_element1, .type .type_element2, .type .type_element3 {
+    width: 300px;
+  }
+
+  .flexi {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 @font-face {
   font-family: "Shrikhand-regular";
   src: url("../font/Shrikhand-Regular.ttf");
@@ -380,7 +422,8 @@ template {
 footer {
   color: white;
   background-color: rgb(58, 57, 57);
-  margin-bottom: 0%;
+  margin-bottom: 0;
+  margin-top: 20px;
   border: 1px solid rgb(58, 57, 57);
 }
 footer h1 {
@@ -447,6 +490,7 @@ section h2 {
 .image_resto {
   height: 300px;
   width: 100%;
+  object-fit: cover;
   z-index: 0;
   background-image: url(./image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
@@ -509,20 +553,26 @@ section h2 {
 }
 .type_element1 {
   box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
-  animation: decouverte 1000ms 300ms;
+  animation: decouverte 1000ms 700ms;
   opacity: 0;
   animation-fill-mode: forwards;
-  transform-origin: top;
   margin: 20px;
   border-radius: 15px;
-  display: flex;
-  font-family: "Roboto", Times, serif;
   justify-content: space-between;
+  font-family: "Roboto", Times, serif;
   background-color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  max-width: 500px;
 }
 .type_element1 p {
   font-family: "Roboto-l", Times, serif;
   padding-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
 }
 .type_element1 h3 {
   padding-left: 10px;
@@ -541,19 +591,26 @@ section h2 {
 }
 .type_element2 {
   box-shadow: 3px 6px 4px rgba(128, 128, 128, 0.2);
-  animation: decouverte 1000ms 500ms;
+  animation: decouverte 1000ms 700ms;
   opacity: 0;
   animation-fill-mode: forwards;
   margin: 20px;
   border-radius: 15px;
-  display: flex;
-  font-family: "Roboto", Times, serif;
   justify-content: space-between;
+  font-family: "Roboto", Times, serif;
   background-color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  max-width: 500px;
 }
 .type_element2 p {
   font-family: "Roboto-l", Times, serif;
   padding-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
 }
 .type_element2 h3 {
   padding-left: 10px;
@@ -577,14 +634,21 @@ section h2 {
   animation-fill-mode: forwards;
   margin: 20px;
   border-radius: 15px;
-  display: flex;
-  font-family: "Roboto", Times, serif;
   justify-content: space-between;
+  font-family: "Roboto", Times, serif;
   background-color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  max-width: 500px;
 }
 .type_element3 p {
   font-family: "Roboto-l", Times, serif;
   padding-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
 }
 .type_element3 h3 {
   padding-left: 10px;
@@ -611,8 +675,9 @@ section h2 {
   border-bottom-right-radius: 15px;
   animation: slide 400ms ease-out forwards;
   transform-origin: right;
+  max-width: 100px;
 }
-.type .check .sign {
+.type .sign {
   background-color: white;
   border-radius: 50%;
   animation: check_turn 400ms forwards;
@@ -621,8 +686,10 @@ section h2 {
 .prix {
   margin-top: 50px;
   margin-right: 30px;
-  position: absolute;
+  margin-left: 10px;
+  position: relative;
   right: 0px;
+  display: block;
 }
 
 .order_btn {
@@ -652,6 +719,29 @@ section h2 {
   cursor: pointer;
 }
 
+.énoncé {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.énoncé p {
+  font-family: "Roboto-l", Times, serif;
+  padding-left: 10px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.énoncé h3 {
+  padding-left: 10px;
+  margin-bottom: -8px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @keyframes decouverte {
   0% {
     opacity: 0;
@@ -672,10 +762,10 @@ section h2 {
 }
 @keyframes prix_slide {
   0% {
-    transform: translateX(0px);
+    transform: translateX(60px);
   }
   100% {
-    transform: translateX(-70px);
+    transform: translateX(0px);
   }
 }
 @keyframes check_turn {

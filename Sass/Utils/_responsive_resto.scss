@@ -1,0 +1,46 @@
+@media all and (min-width: $breakpoints_Low) and (max-width: $breakpoints_high){
+.type{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    height: 300px;
+    border: 2px solid $color-tertiary;
+    border-radius: 15px;    
+    margin:15px;
+    & h4{
+        position: relative;
+        top:80px;
+        right: 20px;
+        margin-left: -20px;
+    
+    }
+    &_underline{
+        display: none;
+    }
+}
+    .type_element1,.type_element2,.type_element3{
+    
+    width: 270px;
+
+    &_underline{
+        display: none;
+    }
+}
+}
+
+@media screen and (min-width:$breakpoints_high){
+
+ 
+    .type{
+        width: 400px;
+        
+        & .type_element1,.type_element2,.type_element3{
+            width: 300px;
+        }
+    }
+    .flexi{
+        display: flex;
+        justify-content: space-around;
+    }
+}

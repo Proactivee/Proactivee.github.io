@@ -14,8 +14,10 @@ section{
     &_resto{
         height: 300px;
         width: 100%;
+        object-fit: cover;
         z-index: 0;
         background-image:url(./image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+
     }
 }
 .menu{
@@ -95,25 +97,32 @@ section{
     &_element1{
 
         box-shadow: $shadow_button;
-        animation: decouverte 1000ms 300ms;
+        animation: decouverte 1000ms 700ms;
         opacity: 0;
         animation-fill-mode: forwards;
-        transform-origin: top;
         margin: 20px;
         border-radius:15px;
-        display: flex;
-        font-family: $font-title;
         justify-content: space-between;
+        font-family: $font-title;
         background-color: white;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: flex;
+        max-width: 500px;
+
         & p{
             font-family: $font-light;
             padding-left: 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
         }
         & h3{
             padding-left: 10px;
             margin-bottom: -8px;
-        
         }
+    
         &:hover{
             cursor: pointer;
         }
@@ -122,8 +131,10 @@ section{
             cursor:pointer;
         }
         &:hover .prix{
+        
             animation: prix_slide 400ms ease-out forwards;
             transform-origin: right;
+           
         }
 
     
@@ -133,23 +144,32 @@ section{
     &_element2{
 
         box-shadow: $shadow_button;
-        animation: decouverte 1000ms 500ms;
+        animation: decouverte 1000ms 700ms;
         opacity: 0;
         animation-fill-mode: forwards;
         margin: 20px;
         border-radius:15px;
-        display: flex;
-        font-family: $font-title;
         justify-content: space-between;
+        font-family: $font-title;
         background-color: white;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: flex;
+        max-width: 500px;
+
         & p{
             font-family: $font-light;
             padding-left: 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
         }
         & h3{
             padding-left: 10px;
             margin-bottom: -8px;
         }
+    
         &:hover{
             cursor: pointer;
         }
@@ -158,8 +178,10 @@ section{
             cursor:pointer;
         }
         &:hover .prix{
+        
             animation: prix_slide 400ms ease-out forwards;
             transform-origin: right;
+           
         }
     }
     &_element3{
@@ -170,18 +192,28 @@ section{
         animation-fill-mode: forwards;
         margin: 20px;
         border-radius:15px;
-        display: flex;
-        font-family: $font-title;
         justify-content: space-between;
+        font-family: $font-title;
         background-color: white;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: flex;
+        max-width: 500px;
+
         & p{
             font-family: $font-light;
             padding-left: 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+           
         }
         & h3{
             padding-left: 10px;
             margin-bottom: -8px;
         }
+    
         &:hover{
             cursor: pointer;
         }
@@ -190,12 +222,15 @@ section{
             cursor:pointer;
         }
         &:hover .prix{
+        
             animation: prix_slide 400ms ease-out forwards;
             transform-origin: right;
+           
         }
+        
     }
 
-    & .check{
+.check{
         display: none;
         padding: 25px;
         font-size: 30px;
@@ -205,7 +240,10 @@ section{
         border-bottom-right-radius: 15px;
         animation: slide 400ms ease-out forwards;
         transform-origin: right;
+        max-width: 100px;
         
+        }
+    
 
     
         
@@ -217,15 +255,16 @@ section{
 
         }
     }
-    
 
-}
+
 .prix{
     margin-top: 50px;
     margin-right: 30px;
-    position: absolute;
-    right:0px
-
+    margin-left: 10px;
+    position: relative;
+    right:0px;
+    display: block;
+  
 }
 .order_btn{
     @include btn_core;
@@ -237,6 +276,33 @@ section{
         cursor:pointer;
     }
     
+}
+
+.énoncé{
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    & p{
+            
+        font-family: $font-light;
+        padding-left: 10px;
+        width: 100%;
+        display: block;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+       
+       
+    }
+    & h3{
+        padding-left: 10px;
+        margin-bottom: -8px;
+        display:block;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
 }
 
 @keyframes decouverte{
@@ -261,10 +327,10 @@ section{
 }
 @keyframes prix_slide{
     0%{
-        transform:translateX(0px)
+        transform:translateX(60px)
     }
     100%{
-        transform: translateX(-70px);
+        transform: translateX(0px);
     }
 }
 @keyframes check_turn{
