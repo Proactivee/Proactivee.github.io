@@ -29,14 +29,14 @@
 }
 }
 
-@media screen and (min-width:$breakpoints_high){
+@media screen and (min-width:$breakpoints_high_desktop){
 
  
     .type{
-        width: 400px;
+        min-width: 300px;
         
         & .type_element1,.type_element2,.type_element3{
-            width: 300px;
+        width: 320px;
         }
     }
     .flexi{

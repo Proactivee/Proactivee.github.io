@@ -31,12 +31,12 @@
     display: none;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 993px) {
   .type {
-    width: 400px;
+    min-width: 300px;
   }
   .type .type_element1, .type .type_element2, .type .type_element3 {
-    width: 300px;
+    width: 320px;
   }
 
   .flexi {
