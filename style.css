@@ -74,10 +74,6 @@
   .choice .rest {
     max-width: 470px;
   }
-
-  body {
-    max-width: 1440px;
-  }
 }
 /* -----Import des font---------*/
 @font-face {
